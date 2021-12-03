@@ -63,7 +63,7 @@ async def main():
                 response = await response
                 logging.info(response)
                 APP_ID = response.message.message.strip()
-                await event.delete()
+                await e
                 await asyncio.sleep(2)
                 await conv.send_message("Hey Good..\n\nNow please Enter your `API_HASH`⤵️🔽")
                 response = conv.wait_event(events.NewMessage(
@@ -72,7 +72,7 @@ async def main():
                 response = await response
                 logging.info(response)
                 API_HASH = response.message.message.strip()
-                await event.delete()
+                
                 await asyncio.sleep(2)
                 await conv.send_message(Translation.INPUT_PHONE_NUMBER)
                 response = conv.wait_event(events.NewMessage(
