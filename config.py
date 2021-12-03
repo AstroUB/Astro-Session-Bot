@@ -6,7 +6,7 @@ class Config(object):
     TG_DUMP_CHANNEL = int(os.environ.get("TG_DUMP_CHANNEL", "0"))
     URL = os.environ.get('URL', "")
     PORT = int(os.environ.get('PORT', 5000)) 
-    APP_ID = int(os.environ.get("APP_ID", 6))
+    APP_ID = os.environ.get("APP_ID", 6)
     API_HASH = os.environ.get("API_HASH", "")
     
 class Development(Config):
