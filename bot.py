@@ -38,13 +38,14 @@ UniBorgBotClient = TelegramClient(
     ).start(bot_token=Config.TG_BOT_TOKEN)
     
 @UniBorgBotClient.on(events.NewMessage(pattern="/help"))
-    async def helpi(event):
+async def helpi(event):
         await UniBorgBotClient.send_message(event.chat_id, "Hey User👀... Below is Description:\nName: ƛsτʀ๏ Sᴇssɪᴏɴ Gᴇɴᴇʀᴀᴛᴏʀ\nClass: [Python3](https://python.org)\nLibrary: [Telethon](https://docs.telethon.dev/)\nWork: To Generate a Safe and long lasting String Session For your Telethon userbot..!\nC R E A T O R:", buttons=[
         [
           Button.url("ƛsτʀ๏ υsєяъ๏т", url="https://t.me/Astro_UserBot"),
           Button.url("Ƥṩүƈн๏ ɮѳτs", url="https://t.me/Psycho_Bots")]
           ])
-me = await UniBorgBotClient.get_me()
+        
+me = UniBorgBotClient.get_me()
         # "me" is an User object. You can pretty-print
         # any Telegram object with the "stringify" method:
 logging.info(me.stringify())
