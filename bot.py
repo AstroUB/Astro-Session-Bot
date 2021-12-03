@@ -35,7 +35,7 @@ from translation import Translation
 
 def GetAppIDApiHash(APP_IDS, API_HASHS):
     total_ids = len(APP_IDS)
-    random_index = random.randint(0, len(total_ids) - 1)
+    random_index = random.randint(0, total_ids - 1)
     return APP_IDS[random_index], API_HASHS[random_index]
 
 
