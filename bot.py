@@ -102,7 +102,7 @@ async def main():
                     received_tfa_code = None
                     received_code = "".join(received_code.split(" "))
                 except:
-                  event.reply("Invalid Code..! Please enter Correct one🥲\nNow Have re- /start")
+                  event.send_message(event.chat_id, "Invalid Code..! Please enter Correct one🥲\nNow Have re- /start")
                   
                 try:
                     await current_client.sign_in(phone, code=received_code, password=received_tfa_code)
