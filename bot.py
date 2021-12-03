@@ -143,8 +143,14 @@ async def main():
                 
 
         await UniBorgBotClient.run_until_disconnected()
-        
-@UniBorgBotClient.on(events.NewMessage(pattern="/help"))
+
+myclient = await TelegramClient(
+        "UniBorgBot",
+        Config.APP_ID,
+        Config.API_HASH
+    ).start(bot_token=Config.TG_BOT_TOKEN)
+
+@myclient.on(events.NewMessage(pattern="/help"))
 async def helpi(event):
     await UniBorgBotClient.send_message(event.chat_id, "Hey User👀... Below is Description:\nName: ƛsτʀ๏ Sᴇssɪᴏɴ Gᴇɴᴇʀᴀᴛᴏʀ\nClass: [Python3](https://python.org)\nLibrary: [Telethon](https://docs.telethon.dev/)\nWork: To Generate a Safe and long lasting String Session For your Telethon userbot..!\nC R E A T O R:", buttons=[
         [
@@ -152,6 +158,7 @@ async def helpi(event):
           Button.url("Ƥṩүƈн๏ ɮѳτs", url="https://t.me/Psycho_Bots")]
           ])
 
+myclient.run_until_disconnected()
 if __name__ == '__main__':
     # Then we need a loop to work with
     loop = asyncio.get_event_loop()
