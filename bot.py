@@ -71,7 +71,7 @@ async def main():
                     StringSession(),
                     api_id=APP_ID,
                     api_hash=API_HASH,
-                    device_model="@AstroSession_bot",
+                    device_model="@AstroSessionBot",
                     system_version="@Astro_UserBot",
                     app_version="9.6.9",
                     lang_code="en"
