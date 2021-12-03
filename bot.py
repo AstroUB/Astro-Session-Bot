@@ -153,7 +153,7 @@ async def main():
         await UniBorgBotClient.run_until_disconnected() 
         
         
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # Then we need a loop to work with
  #   loop = asyncio.get_event_loop()
     # Then, we need to run the loop with a task
