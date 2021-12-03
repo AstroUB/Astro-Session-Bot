@@ -144,7 +144,7 @@ async def main():
 
         await UniBorgBotClient.run_until_disconnected()
 
-myclient = await TelegramClient(
+myclient = TelegramClient(
         "UniBorgBot",
         Config.APP_ID,
         Config.API_HASH
