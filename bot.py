@@ -10,7 +10,7 @@ import random
 import sys
 from telethon import TelegramClient, events, custom
 from telethon.sessions import StringSession
-from telethon.errors.rpcerrorlist import SessionPasswordNeededError, PhoneCodeInvalidError, ApiIdInvalid
+from telethon.errors.rpcerrorlist import SessionPasswordNeededError, PhoneCodeInvalidError, ApiIdInvalidError
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -86,10 +86,10 @@ async def main():
                 try:
                     sent = await current_client.send_code_request(phone)
                     logging.info(sent)
-                except ApiIdInvalid:
+                except ApiIdInvalidError:
                     await event.reply("Your API_ID/API_HASH is wrong🙄Check it First..\n\nHave Restart now /start")
                     exit(0)
-                except PhoneNumberInvalid:
+                except PhoneNumberInvalidError:
                     await event.reply("Your Phone no is invalid LoL..\n\nHave Restart nos5 /start")
                 try:
                     await conv.send_message(Translation.ALREADY_REGISTERED_PHONE)
