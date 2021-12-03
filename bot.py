@@ -62,7 +62,7 @@ async def main():
                 ))
                 response = await response
                 logging.info(response)
-                API_ID = response.message.message.strip()
+                APP_ID = response.message.message.strip()
                 await event.delete()
                 await asyncio.sleep(2)
                 await conv.send_message("Hey Good..\n\nNow please Enter your `API_HASH`⤵️🔽")
