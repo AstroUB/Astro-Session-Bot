@@ -48,7 +48,7 @@ async def helpi(event):
 me = UniBorgBotClient.get_me()
         # "me" is an User object. You can pretty-print
         # any Telegram object with the "stringify" method:
-logging.info(me.stringify())
+# logging.info(me.stringify())
 @UniBorgBotClient.on(events.NewMessage(pattern="/start"))
 async def handler(event):
             # logging.info(event.stringify()
