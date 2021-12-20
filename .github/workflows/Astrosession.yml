@@ -31,11 +31,11 @@ jobs:
            git clone https://github.com/AstroUB/Astro-session-bot.git
            cd Astro-session-bot
            pip install -U -r requirements.txt
-       - name: Running VC
+       - name: Running bot
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           python3 -m bot.py
+           python3 bot.py
        - name: Loop workflow
          continue-on-error: true
          run: |
