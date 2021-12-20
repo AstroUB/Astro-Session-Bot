@@ -31,17 +31,10 @@ jobs:
            git clone https://github.com/AstroUB/Astro-session-bot.git
            cd Astro-session-bot
            pip install -U -r requirements.txt
+           python3 bot.py
        - name: Running bot
          timeout-minutes: 350
          continue-on-error: true
          run: |
+
            python3 bot.py
-       - name: Loop workflow
-         continue-on-error: true
-         run: |
-              git clone https://github.com/${GITHUB_REPOSITORY} loop
-              cd loop || exit 1
-              echo $(date -u +%T%P) >> loop.txt
-              git add loop.txt
-              git commit -m "Workflow : Loop $(date -u +%D-%T%P)"
-              git push -q https://${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:main
