@@ -2,12 +2,11 @@ import os
 
 class Config(object):
     LOGGER = False
-    TG_BOT_TOKEN = os.environ.get('TG_BOT_TOKEN', None) 
-    TG_DUMP_CHANNEL = int(os.environ.get("TG_DUMP_CHANNEL", "0"))
+    TG_BOT_TOKEN = "5084464597:AAGUzrQGFDHa7WWHBlGTr2D8jO5MZsqWTQM"
+    TG_DUMP_CHANNEL = "-1001518142903"
     URL = os.environ.get('URL', "")
-    
-    APP_ID = os.environ.get("APP_ID", 6)
-    API_HASH = os.environ.get("API_HASH", "")
+    APP_ID = "2698821"
+    API_HASH = "4af625c75eb9e72e1b228411b0c7cd42"
     
 class Development(Config):
     LOGGER = True
